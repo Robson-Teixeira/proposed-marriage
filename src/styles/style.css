@@ -1,45 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
 
 body {
-    height: 100vh;
+    height: 100vh; /* 100% da altura da viewport */
     display: flex;
     align-items: center;
     justify-content: center;
-    background-size: 1000px;
+    background-size: cover; /* Ajusta a imagem de fundo para cobrir toda a tela */
     background-image: url("https://www.psdgraphics.com/wp-content/uploads/2022/01/white-math-paper-texture.jpg");
     background-position: center center;
+    margin: 0; /* Remove margens padrão do body */
+    overflow: hidden; /* Evita scroll se algo ultrapassar a viewport */
 }
 
 .paper {
     background-image: url("https://i0.wp.com/textures.world/wp-content/uploads/2018/10/2-Millimeter-Paper-Background-copy.jpg?ssl=1");
-    background-size: 500px;
+    background-size: cover; /* Ajusta a imagem de fundo para cobrir toda a tela */
     background-position: center center;
-    padding: 20px 100px;
+    padding: 5vw 10vw; /* Usa unidades relativas à largura da viewport */
     transform: rotateZ(-5deg);
     box-shadow: 1px 15px 20px 0px rgba(0, 0, 0, 0.5);
     position: absolute;
+    max-width: 50vw; /* Limita a largura máxima a 50% da largura da viewport */
 }
 
 .paper.heart {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 30vw; /* Usa unidades relativas à largura da viewport */
+    height: 30vw; /* Usa unidades relativas à largura da viewport */
     padding: 0;
     border-radius: 50%;
+    margin: 0 auto; /* Centraliza o coração horizontalmente */
 }
 
 .paper.image {
-    padding: 10px;
+    padding: 2vw; /* Usa unidades relativas à largura da viewport */
 }
 
-.paper.image p {
-    font-size: 30px;
+paper.image p {
+    font-size: 5vw; /* Usa unidades relativas à largura da viewport */
 }
 
 img {
-    max-height: 300px;
+    max-height: 60%; /* Permite que a imagem se ajuste à altura do container */
     width: 100%;
     user-select: none;
+    object-fit: contain; /* Ajusta a imagem para caber dentro do container sem distorcer */
 }
 
 .paper.heart::after {
@@ -50,7 +55,7 @@ img {
     position: absolute;
     top: 0;
     left: 0;
-    background-size: 150px;
+    background-size: 50%; /* Ajusta o tamanho da imagem de fundo */
     background-position: center center;
     background-repeat: no-repeat;
     opacity: 0.6;
@@ -62,8 +67,9 @@ img {
 
 p {
     font-family: 'Zeyada';
-    font-size: 50px;
+    font-size: 10vw; /* Usa unidades relativas à largura da viewport */
     color: rgb(0, 0, 100);
     opacity: 0.75;
     user-select: none;
+    text-align: center; /* Centraliza o texto */
 }
